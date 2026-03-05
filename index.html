@@ -1,0 +1,131 @@
+<head>
+
+    <meta charset="utf-8">
+    <meta charset="viewport" content="width=device-width", initital-scale=1, shrink-to-fit="yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hariz Azha | Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+</head>
+
+<body>
+
+  <div id="navbar">
+    <a href="javascript:void(0);" class="icon" aria-label="Toggle navigation" onclick="toggleNavbar()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <div class="nav-links">
+      <a href="#about-me">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#technical-skills">Tech Skill</a>
+      <a href="#projects">Project</a>
+    </div>
+  </div>
+  
+  <section class="hero">
+    <div class="row">
+      
+      <div class="column">
+          <img src="assets/info/potrait.png" class="responsive">
+      </div>
+      
+      <div class="column">
+         <h1>AHMAD HARIZ MOHD AZHA</h1>
+         <h3> Intelligent Systems Engineering Student</h3>
+         <p>Building intelligent systems and machine learning solutions to solve real-world problems.</p>
+         <a href="assets/info/Resume.pdf" class="resume">resume</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="container">
+    <section id="about-me">
+      <h2>About Me</h2>
+      <div class="card education-card">
+        <ul class="timeline">
+          <li class="timeline-item">
+            <h3>Bachelor of Information Systems (Hons.) Intelligent Systems Engineering</h3>
+          </li>
+          <li class="timeline-item">
+            <h3>Diploma of Computer Science</h3>
+          </li>
+        </ul>
+        <p class="about-note">I specialize in Artificial Intelligence and machine learning, focusing on efficient and scalable intelligent systems.</p>
+      </div>
+    </section>
+
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <p class="card">Polycore optical</p>
+    </section>
+
+    
+    <section id="technical-skills">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+
+        <div class="card">
+          <h3>Programming</h3>
+          <p>Python, C++, JavaScript, SQL</p>
+        </div>
+        
+        <div class="card">
+          <h3>AI & Data</h3>
+          <p>Machine Learning, Deep Learning, TensorFlow, MediaPipe</p>
+        </div>
+        
+        <div class="card">
+          <h3>Tools</h3>
+          <p>VS Code PowerBI</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+
+      <div class="card">
+        <h3>Malaysian Sign Language Recognition System</h3>
+        <p>Developed a lightweight deep learning model using MediaPipe-based feature extraction and sequence modeling techniques.</p>
+      </div>
+      <div class="card">
+        <h3>Data-Driven Insights into Rental Preferences: Analyzing Consumer Behavior in Kuala Lumpur and Selangor</h3>
+        <img src="">
+        <p>Developed a lightweight deep learning model using MediaPipe-based feature extraction and sequence modeling techniques.</p>
+      </div>
+
+    </section>
+
+  </div>
+
+  <footer id="contact">
+    <p>Open to internship and entry-level opportunities</p>
+    <p>harizazha2710@email.com | LinkedIn | GitHub</p>
+  </footer>
+
+<script>
+  function toggleNavbar() {
+    document.getElementById("navbar").classList.toggle("responsive");
+  }
+
+  document.querySelectorAll("#navbar .nav-links a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      document.getElementById("navbar").classList.remove("responsive");
+    });
+  });
+</script>
+
+</body>
+</html>
