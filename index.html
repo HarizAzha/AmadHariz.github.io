@@ -1,131 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ahmad Hariz Mohd Azha — Intelligent Systems Engineering student seeking internship in AI and machine learning.">
+  <meta name="author" content="Ahmad Hariz Mohd Azha">
+  <title>Hariz Azha · Portfolio</title>
 
-    <meta charset="utf-8">
-    <meta charset="viewport" content="width=device-width", initital-scale=1, shrink-to-fit="yes">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Hariz Azha | Portfolio</title>
+  <!-- Favicon: inline SVG data URI — "H" monogram, updates with theme -->
+  <link rel="icon" id="favicon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231a1a18'/><text x='16' y='22' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23fafaf8' text-anchor='middle'>H</text></svg>">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
-
 <body>
 
-  <div id="navbar">
-    <a href="javascript:void(0);" class="icon" aria-label="Toggle navigation" onclick="toggleNavbar()">
-      <i class="fa fa-bars"></i>
-    </a>
-    <div class="nav-links">
-      <a href="#about-me">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#technical-skills">Tech Skill</a>
-      <a href="#projects">Project</a>
+  <nav>
+    <a href="#" class="nav-logo">Hariz Azha</a>
+
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Theme switcher -->
+      <div class="theme-wrapper">
+        <button class="theme-btn" id="themeToggle" aria-label="Change theme">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.2"/><path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3.05 3.05l1.06 1.06M11.89 11.89l1.06 1.06M3.05 12.95l1.06-1.06M11.89 4.11l1.06-1.06" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <span class="theme-btn-label">Theme</span>
+        </button>
+
+        <div class="theme-panel" id="themePanel">
+          <p class="theme-panel-title">Choose theme</p>
+
+          <button class="theme-option active" data-theme="default">
+            <span class="theme-swatch" style="background:#fafaf8; border-color:rgba(0,0,0,0.15);"></span>
+            <div>
+              <div class="theme-option-label">Default</div>
+              <div class="theme-option-sub">Warm minimal</div>
+            </div>
+          </button>
+
+          <button class="theme-option" data-theme="midnight">
+            <span class="theme-swatch" style="background:#0d1117; border-color:rgba(255,255,255,0.15);"></span>
+            <div>
+              <div class="theme-option-label">Midnight</div>
+              <div class="theme-option-sub">Deep navy</div>
+            </div>
+          </button>
+
+          <button class="theme-option" data-theme="win95">
+            <span class="theme-swatch" style="background:#c0c0c0; border-top:2px solid #fff; border-left:2px solid #fff; border-right:2px solid #808080; border-bottom:2px solid #808080; border-radius:0;"></span>
+            <div>
+              <div class="theme-option-label">Win 95</div>
+              <div class="theme-option-sub">Classic grey</div>
+            </div>
+          </button>
+
+          <button class="theme-option" data-theme="parchment">
+            <span class="theme-swatch" style="background:#f5f0e8; border-color:rgba(44,24,16,0.2);"></span>
+            <div>
+              <div class="theme-option-label">Parchment</div>
+              <div class="theme-option-sub">Editorial warm</div>
+            </div>
+          </button>
+
+        </div>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
+
+  <div class="nav-drawer" id="navDrawer">
+    <a href="#about" class="drawer-link">About</a>
+    <a href="#experience" class="drawer-link">Experience</a>
+    <a href="#skills" class="drawer-link">Skills</a>
+    <a href="#projects" class="drawer-link">Projects</a>
+    <a href="#contact" class="drawer-link">Contact</a>
   </div>
-  
-  <section class="hero">
-    <div class="row">
-      
-      <div class="column">
-          <img src="assets/info/potrait.png" class="responsive">
-      </div>
-      
-      <div class="column">
-         <h1>AHMAD HARIZ MOHD AZHA</h1>
-         <h3> Intelligent Systems Engineering Student</h3>
-         <p>Building intelligent systems and machine learning solutions to solve real-world problems.</p>
-         <a href="assets/info/Resume.pdf" class="resume">resume</a>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="hero-top">
+        <img src="assets/info/portrait.png" alt="Ahmad Hariz" class="portrait-img">
+        <div class="hero-top-meta">
+          <p class="location">Shah Alam, Selangor</p>
+          <span class="available-pill">Seeking internship 2025</span>
+        </div>
       </div>
 
-    </div>
-  </section>
-
-  <div class="container">
-    <section id="about-me">
-      <h2>About Me</h2>
-      <div class="card education-card">
-        <ul class="timeline">
-          <li class="timeline-item">
-            <h3>Bachelor of Information Systems (Hons.) Intelligent Systems Engineering</h3>
-          </li>
-          <li class="timeline-item">
-            <h3>Diploma of Computer Science</h3>
-          </li>
-        </ul>
-        <p class="about-note">I specialize in Artificial Intelligence and machine learning, focusing on efficient and scalable intelligent systems.</p>
+      <h1>Ahmad Hariz<br><em>Mohd Azha</em></h1>
+      <p class="hero-desc">Intelligent Systems Engineering student at UiTM — specialising in AI, machine learning, and data analytics. Building systems that make sense of real-world data.</p>
+      <div class="hero-actions">
+        <a href="assets/info/Resume.pdf" class="btn-primary" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1v9M4 7l4 4 4-4M2 12v2h12v-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download Resume
+        </a>
+        <a href="https://linkedin.com/in/harizazha" class="btn-secondary" target="_blank">LinkedIn</a>
+        <a href="#contact" class="btn-secondary">Get in touch</a>
       </div>
     </section>
 
+    <section id="about">
+      <p class="section-label reveal">About</p>
+      <p class="about-text reveal">
+        I'm an <strong>Intelligent Systems Engineering</strong> student at UiTM Shah Alam with a strong foundation in
+        <strong>AI, machine learning, and data analytics</strong>. I enjoy building efficient, scalable systems —
+        from real-time sign language recognition to data-driven dashboards. I'm actively seeking an internship where
+        I can contribute to <strong>AI, software, or data engineering</strong> projects.
+      </p>
+
+      <div class="stat-row">
+        <div class="stat-card reveal">
+          <div class="stat-value">3.28</div>
+          <div class="stat-label">Current CGPA</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-value">3</div>
+          <div class="stat-label">Projects built</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-value">6<span style="font-size:1rem">mo</span></div>
+          <div class="stat-label">Internship exp.</div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <p class="date">March 2024 – Present</p>
+          <h3>B.IS (Hons.) Intelligent Systems Engineering</h3>
+          <p class="institution">Universiti Teknologi Mara (UiTM) Shah Alam</p>
+          <span class="cgpa-badge">CGPA 3.28</span>
+        </div>
+        <div class="timeline-item reveal">
+          <p class="date">July 2021 – March 2024</p>
+          <h3>Diploma in Computer Science</h3>
+          <p class="institution">Universiti Teknologi Mara (UiTM) Kampus Segamat, Johor</p>
+          <span class="cgpa-badge">CGPA 3.57</span>
+        </div>
+      </div>
+    </section>
 
     <section id="experience">
-      <h2>Experience</h2>
-      <p class="card">Polycore optical</p>
+      <p class="section-label reveal">Experience</p>
+
+      <div class="exp-card reveal">
+        <div class="exp-header">
+          <div>
+            <h3>IT Technical Support Intern</h3>
+            <p class="company">Polycore Optical (M) Sdn Bhd</p>
+          </div>
+          <span class="exp-date">Sep 2023 – Feb 2024</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Provided first-level technical support, diagnosing software and hardware issues promptly for end-users.</li>
+          <li>Troubleshot printer and scanner faults, restoring functionality and reducing office downtime.</li>
+          <li>Set up new workstations with cabling, equipment configuration, and software installation.</li>
+          <li>Maintained and repaired peripheral equipment to ensure optimal performance across the office.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-header">
+          <div>
+            <h3>Printer Technician (Part-Time)</h3>
+            <p class="company">Abe Klinik Komputer @ Azbyte Enterprise</p>
+          </div>
+          <span class="exp-date">Apr 2021 – Sep 2021</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Diagnosed and repaired hardware faults, restoring machines to peak performance.</li>
+          <li>Communicated diagnostic findings to customers and outlined repair options clearly.</li>
+          <li>Configured and maintained equipment performance through systematic troubleshooting.</li>
+        </ul>
+      </div>
     </section>
 
-    
-    <section id="technical-skills">
-      <h2>Technical Skills</h2>
+    <section id="skills">
+      <p class="section-label reveal">Technical Skills</p>
       <div class="skills-grid">
-
-        <div class="card">
-          <h3>Programming</h3>
-          <p>Python, C++, JavaScript, SQL</p>
+        <div class="skill-group reveal">
+          <p class="skill-group-label">Programming Languages</p>
+          <div class="skill-tags">
+            <span class="tag">Python</span><span class="tag">C++</span><span class="tag">Java</span>
+            <span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">SQL</span><span class="tag">HTML / CSS</span>
+          </div>
         </div>
-        
-        <div class="card">
-          <h3>AI & Data</h3>
-          <p>Machine Learning, Deep Learning, TensorFlow, MediaPipe</p>
+        <div class="skill-group reveal">
+          <p class="skill-group-label">AI & Machine Learning</p>
+          <div class="skill-tags">
+            <span class="tag">Machine Learning</span><span class="tag">Deep Learning</span>
+            <span class="tag">LSTM</span><span class="tag">TensorFlow</span><span class="tag">MediaPipe</span><span class="tag">OpenCV</span>
+          </div>
         </div>
-        
-        <div class="card">
-          <h3>Tools</h3>
-          <p>VS Code PowerBI</p>
+        <div class="skill-group reveal">
+          <p class="skill-group-label">Tools & Platforms</p>
+          <div class="skill-tags">
+            <span class="tag">Power BI</span><span class="tag">VS Code</span><span class="tag">Git</span><span class="tag">Canva</span>
+          </div>
         </div>
-
+        <div class="skill-group reveal">
+          <p class="skill-group-label">Spoken Languages</p>
+          <div class="skill-tags">
+            <span class="tag">Malay — Native</span><span class="tag">English — Intermediate</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="projects">
-      <h2>Featured Projects</h2>
+      <p class="section-label reveal">Projects</p>
 
-      <div class="card">
-        <h3>Malaysian Sign Language Recognition System</h3>
-        <p>Developed a lightweight deep learning model using MediaPipe-based feature extraction and sequence modeling techniques.</p>
-      </div>
-      <div class="card">
-        <h3>Data-Driven Insights into Rental Preferences: Analyzing Consumer Behavior in Kuala Lumpur and Selangor</h3>
-        <img src="">
-        <p>Developed a lightweight deep learning model using MediaPipe-based feature extraction and sequence modeling techniques.</p>
+      <div class="project-card reveal">
+        <div class="project-card-header">
+          <p class="project-tag">AI · Computer Vision</p>
+          <!-- <a href="https://github.com/harizazha" class="project-link" target="_blank">
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M6 12c0 .6-.4 1.5-1 2 2 0 4-1 4-2V9.5a2.5 2.5 0 00-.7-1.7C10.8 7.4 13 6.3 13 4c0-.8-.3-1.6-.8-2.2.2-.5.2-1.3-.2-2.3 0 0-.7.1-2.1 1A7 7 0 008 .3c-.7 0-1.3.1-2 .2C4.5.6 3.1.5 3.1.5c-.4 1-.4 1.8-.2 2.3C2.3 3.4 2 4.2 2 5c0 2.3 2.2 3.4 3.7 3.8A2.5 2.5 0 005 10.5V12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            GitHub
+          </a> -->
+        </div>
+        <h3>Malaysian Sign Language Real-Time Detection</h3>
+        <p>A deep learning system that recognises MSL continuous phrases in real time, translating hand gestures into text using LSTM and MediaPipe.</p>
+        <ul class="project-bullets">
+          <li>Designed and trained an LSTM model to recognise continuous hand gestures from MSL video streams.</li>
+          <li>Processed input frames using MediaPipe holistic landmarks for spatial-temporal feature extraction.</li>
+          <li>Explored dataset preprocessing, gesture segmentation, and hyperparameter tuning for improved accuracy.</li>
+          <li>Built a real-time inference pipeline that translates gestures into readable text output.</li>
+        </ul>
+        <div class="project-stack">
+          <span class="tag">Python</span><span class="tag">LSTM</span><span class="tag">MediaPipe</span><span class="tag">TensorFlow</span><span class="tag">OpenCV</span>
+        </div>
       </div>
 
+      <div class="project-card reveal">
+        <div class="project-card-header">
+          <p class="project-tag">Data Analytics · Visualisation</p>
+          <!-- <a href="https://github.com/harizazha" class="project-link" target="_blank">
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M6 12c0 .6-.4 1.5-1 2 2 0 4-1 4-2V9.5a2.5 2.5 0 00-.7-1.7C10.8 7.4 13 6.3 13 4c0-.8-.3-1.6-.8-2.2.2-.5.2-1.3-.2-2.3 0 0-.7.1-2.1 1A7 7 0 008 .3c-.7 0-1.3.1-2 .2C4.5.6 3.1.5 3.1.5c-.4 1-.4 1.8-.2 2.3C2.3 3.4 2 4.2 2 5c0 2.3 2.2 3.4 3.7 3.8A2.5 2.5 0 005 10.5V12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            GitHub
+          </a> -->
+        </div>
+        <h3>Data-Driven Insights into Rental Preferences</h3>
+        <p>Analysed consumer behaviour across KL and Selangor rental markets to surface insights on pricing, demand, and demographics.</p>
+        <ul class="project-bullets">
+          <li>Collected and cleaned rental market data to identify pricing patterns and consumer preferences by location.</li>
+          <li>Designed interactive Power BI dashboards visualising demand, affordability, and demographic behaviour.</li>
+        </ul>
+        <div class="project-stack">
+          <span class="tag">Power BI</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Data Analysis</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-header">
+          <p class="project-tag">Web Development · Full Stack</p>
+          <!-- <a href="https://github.com/harizazha" class="project-link" target="_blank">
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M6 12c0 .6-.4 1.5-1 2 2 0 4-1 4-2V9.5a2.5 2.5 0 00-.7-1.7C10.8 7.4 13 6.3 13 4c0-.8-.3-1.6-.8-2.2.2-.5.2-1.3-.2-2.3 0 0-.7.1-2.1 1A7 7 0 008 .3c-.7 0-1.3.1-2 .2C4.5.6 3.1.5 3.1.5c-.4 1-.4 1.8-.2 2.3C2.3 3.4 2 4.2 2 5c0 2.3 2.2 3.4 3.7 3.8A2.5 2.5 0 005 10.5V12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            GitHub
+          </a> -->
+        </div>
+        <h3>Train Ticketing Platform</h3>
+        <p>A full-stack booking platform managing route scheduling, real-time seat availability, and ticket generation with a multi-step responsive UI.</p>
+        <ul class="project-bullets">
+          <li>Built booking logic in JavaScript and PHP for route scheduling, seat availability, and ticket generation.</li>
+          <li>Designed a responsive UI with HTML/CSS featuring visual seat maps and a streamlined reservation flow.</li>
+          <li>Implemented backend validation in Java and PHP to prevent double-booking and ensure data integrity.</li>
+        </ul>
+        <div class="project-stack">
+          <span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">Java</span><span class="tag">HTML / CSS</span><span class="tag">SQL</span>
+        </div>
+      </div>
     </section>
 
-  </div>
+    <section class="contact-section" id="contact">
+      <h2 class="reveal">Let's work together.</h2>
+      <p class="reveal">I'm actively looking for internship opportunities in AI, machine learning, data engineering, or software development. Feel free to reach out — I'd love to chat.</p>
+      <div class="contact-links reveal">
+        <a href="/cdn-cgi/l/email-protection#e68e87948f9c879c8e87d4d1d7d6a6818b878f8ac885898b" class="contact-link">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span class="__cf_email__" data-cfemail="472f26352e3d263d2f267570767707202a262e2b6924282a">[email&#160;protected]</span>
+        </a>
+        <a href="https://linkedin.com/in/harizazha" class="contact-link" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M4 6.5V12M4 4.5V4.51" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 12V9c0-1.1.9-2 2-2s2 .9 2 2v3M8 6.5V12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/harizazha" class="contact-link" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 12c0 .6-.4 1.5-1 2 2 0 4-1 4-2V9.5a2.5 2.5 0 00-.7-1.7C10.8 7.4 13 6.3 13 4c0-.8-.3-1.6-.8-2.2.2-.5.2-1.3-.2-2.3 0 0-.7.1-2.1 1A7 7 0 008 .3c-.7 0-1.3.1-2 .2C4.5.6 3.1.5 3.1.5c-.4 1-.4 1.8-.2 2.3C2.3 3.4 2 4.2 2 5c0 2.3 2.2 3.4 3.7 3.8A2.5 2.5 0 005 10.5V12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          GitHub
+        </a>
+        <a href="tel:+60126701560" class="contact-link">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h3.5l1 3-1.8 1.1A9.5 9.5 0 009.9 11l1.1-1.8 3 1V14A1 1 0 0113 15C6.4 15 1 9.6 1 3a1 1 0 011-1z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          +60 12-670 1560
+        </a>
+      </div>
+    </section>
 
-  <footer id="contact">
-    <p>Open to internship and entry-level opportunities</p>
-    <p>harizazha2710@email.com | LinkedIn | GitHub</p>
+  </main>
+
+  <footer>
+    <p>Ahmad Hariz Mohd Azha · 2025</p>
   </footer>
 
-<script>
-  function toggleNavbar() {
-    document.getElementById("navbar").classList.toggle("responsive");
-  }
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    /* ── Hamburger ── */
+    const toggle = document.getElementById('navToggle');
+    const drawer = document.getElementById('navDrawer');
 
-  document.querySelectorAll("#navbar .nav-links a").forEach(function (link) {
-    link.addEventListener("click", function () {
-      document.getElementById("navbar").classList.remove("responsive");
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      drawer.classList.toggle('open');
     });
-  });
-</script>
+
+    document.querySelectorAll('.drawer-link').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        drawer.classList.remove('open');
+      });
+    });
+
+    /* ── Scroll reveal ── */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 70);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* ── Theme switcher ── */
+    const themeToggle = document.getElementById('themeToggle');
+    const themePanel  = document.getElementById('themePanel');
+    const html        = document.documentElement;
+    const favicon     = document.getElementById('favicon');
+
+    // Favicon colours per theme
+    const faviconColors = {
+      default:   { bg: '%231a1a18', text: '%23fafaf8' },
+      midnight:  { bg: '%230d1117', text: '%23e6edf3' },
+      win95:     { bg: '%23000080', text: '%23ffffff' },
+      parchment: { bg: '%232c1810', text: '%23f5f0e8' },
+    };
+
+    function updateFavicon(theme) {
+      const c = faviconColors[theme] || faviconColors.default;
+      favicon.href = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='${c.bg}'/><text x='16' y='22' font-family='Georgia,serif' font-size='18' font-weight='700' fill='${c.text}' text-anchor='middle'>H</text></svg>`;
+    }
+
+    // Load saved theme
+    const saved = localStorage.getItem('portfolio-theme') || 'default';
+    html.setAttribute('data-theme', saved);
+    updateFavicon(saved);
+    document.querySelectorAll('.theme-option').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.theme === saved);
+    });
+
+    // Toggle panel
+    themeToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      themePanel.classList.toggle('open');
+    });
+
+    // Close on outside click
+    document.addEventListener('click', () => themePanel.classList.remove('open'));
+    themePanel.addEventListener('click', e => e.stopPropagation());
+
+    // Apply theme
+    document.querySelectorAll('.theme-option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const theme = btn.dataset.theme;
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('portfolio-theme', theme);
+        updateFavicon(theme);
+        document.querySelectorAll('.theme-option').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        themePanel.classList.remove('open');
+      });
+    });
+  </script>
 
 </body>
 </html>
